@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+  <h1 class="AGpage-title">회원가입</h1>
+
+  <form>
+    <fieldset class="memberBox">
+      <h3>회원 정보 입력(필수)</h3>
+      <div class="join-container">
+        <div>
+          <label for="Lable_font-name" class="Lable_font">이름</label>
+          <input type="text" name="" id="Lable_font-name" placeholder="한글은 10자리, 영문은 20자기 이내로 적어주세요.">
+        </div>
+        <div>
+          <label class="Lable_font" for="Lable_font-id">아이디</label>
+          <input type="text" name="" id="Lable_font-id" placeholder="6자리 이상의 영문 혹은 영문,숫자를 조합하여 입력해 주세요.">
+          <button class="Check">중복확인</button>
+        </div>
+        <div>
+          <label class="Lable_font" for="Lable_font-pw">비밀번호</label>
+          <input type="password" id="Lable_font-pw" placeholder="영문,대소문자,숫자,특수문자중 3개 이상을 조합하여 8자리 이상 입력해주세요.">
+        </div>
+        <div>
+          <label class="Lable_font" for="Lable_font-pwcheck">비밀번호 확인</label>
+          <input type="password" id="Lable_font-pwcheck">
+        </div>
+        <div>
+          <label class="Lable_font" for="Lable_font-email">이메일
+          </label>
+          <input type="text" id="Lable_font-email">@<input type="text">
+          <select name="" id="email">
+            <label for="Email">
+              <option value="">직접입력</option>
+              <option value="">naver.com</option>
+              <option value="">daum.net</option>
+              <option value="">google.co.kr</option>
+            </label>
+          </select>
+        </div>
+        <div>
+          <label class="Lable_font">생년월일</label>
+          <input type="text" name="" id="" placeholder="예:20010203">
+        </div>
+        <div>
+          <label class="Lable_font">성별</label>
+          <button class="btn_male" type="button"></button>남성 &nbsp;
+          <button class="btn_male" type="button"></button>여성
+        </div>
+        <div>
+          <label class="Lable_font" for="Lable_font-phone">휴대폰 번호</label>
+          <input type="text" id="Lable_font-phone"> -
+          <input type="text" id=""> -
+          <input type="text" id="">
+          <button class="Check">
+            인증번호 전송
+          </button>
+        </div>
+        <p>어떤 식단에 관심이 있으신가요?</p>
+      </div>
+      <ul class="memberBox-list">
+        <li>다이어트</li>
+        <li>체중증량</li>
+        <li>건강식단</li>
+      </ul>
+      <u class="AGBox-btn">
+        <li>취소</li>
+        <li>회원가입</li>
+      </u>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
