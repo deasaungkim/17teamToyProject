@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-   <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script>
+
+        function cal() {
+            let foodIp = $('#cal_input').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/food",
+                data: {'food_give':foodIp},
+                success: function (response) {
+
+                    let lesult = response['result']
+                    let tansu = lesult['carbohydrate']
+                    let proti = lesult['protein']
+                    let faty = lesult['fat']
+                    let calo = lesult['calorie']
+
+                    console.log(tansu)
+                    $('input[name=tansuId]').attr('value',tansu)
+                    $('input[name=protiId]').attr('value',proti)
+                    $('input[name=fatyId]').attr('value',faty)
+                    $('input[name=caloId]').attr('value',calo)
+
+                }
+
+            });
+        }
+</script>
 </head>
 <body>
   <wrapper id="wrap">
@@ -28,13 +61,13 @@
               <div class="cal-la01">
                 <lable>음식이름</lable>
                 <input id="cal_input" type="text">
-                <button onclick="cal()">계산하기</button>
+                <button type="button" onclick="cal()">계산하기</button>
               </div>
 
-              <div class="cal-la01"><p>탄수화물</p><div class="cal-la02">값1</div><p>칼로리</p></div>
-              <div class="cal-la01"><p>단백질</p><div class="cal-la02">값2</div><p>칼로리</p></div>
-              <div class="cal-la01"><p>지방</p><div class="cal-la02">값3</div><p>칼로리</p></div>
-              <div class="cal-la01"><p>열량</p><div class="cal-la02">값4</div><p>칼로리</p></div>
+              <div class="cal-la01"><p>탄수화물</p><input type="text" value="" name="tansuId" class="cal-la02"></input><p>칼로리</p></div>
+              <div class="cal-la01"><p>단백질</p><input name="protiId" value="" class="cal-la02"></input><p>칼로리</p></div>
+              <div class="cal-la01"><p>지방</p><input name="fatyId" value="" class="cal-la02"></input><p>칼로리</p></div>
+              <div class="cal-la01"><p>열량</p><input name="caloId" value="" class="cal-la02"></input><p>칼로리</p></div>
           </form>
       </aside>
     </div>
@@ -50,7 +83,22 @@
     </ul>
   </footer>
 </body>
-<script>
-    function cal()
-</script>
+
 </html>
+{#$.ajax({#}
+{#                type: "POST",#}
+{#                url: "/",#}
+{#                data: {'food_give':food},#}
+{#                success: function (response) {#}
+{#                    alert(response["msg"])#}
+{#                    window.location.reload()#}
+{#                }#}
+{#            });#}
+
+
+{#            $.ajax({#}
+{#                type: "GET",#}
+{#                url: "/homework",#}
+{#                data: {},#}
+{#                success: function (response) {#}
+{#                    let rows = response['comments']#}

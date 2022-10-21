@@ -60,7 +60,8 @@ aside {
 .cal-la01{display: flex;
     margin: 40px 0 40px 0}
 .cal-la02{margin: 0 10px 0 10px;
-border: #ffffff solid}
+    border: #ffffff solid;
+    width: 50px;}
 
 footer {
   height: 300px;
