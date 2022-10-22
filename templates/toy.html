@@ -14,13 +14,14 @@
 
         function cal() {
             let foodIp = $('#cal_input').val()
+            console.log('foodIp', foodIp);
 
             $.ajax({
                 type: "POST",
                 url: "/food",
                 data: {'food_give':foodIp},
                 success: function (response) {
-
+                    console.log('res',response)
                     let lesult = response['result']
                     let tansu = lesult['carbohydrate']
                     let proti = lesult['protein']
@@ -46,6 +47,7 @@
       <div class="nav01">
         <p><a href="/login">로그인</a></p>
         <p><a href="/join">회원가입</a></p>
+          <p><a href="/register">test 회원가입</a></p>
       </div>
     </nav>
     <header>
