@@ -16,17 +16,23 @@
 
 h1 {
   text-align: center;
+    padding-top: 20px;
 }
 
 nav {
   height: 100px;
-  background-color: yellow;
+    border: gray solid;
+    margin: 20px 0 20px 0;
+    border-right: none;
+    border-left: none;
 }
 
 .nav01 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+    padding-right: 110px;
+    padding-top: 29px;
 }
 
 .nav01>p {
@@ -35,11 +41,6 @@ nav {
 
 .nav01>p:not(:last-child) {
   border-right: solid;
-}
-
-header {
-  height: 100px;
-  background-color: green;
 }
 
 #wrap01 {
@@ -55,13 +56,18 @@ main {
 aside {
   width: 30%;
   height: 600px;
-  background-color: blueviolet;
 }
 .cal-la01{display: flex;
     margin: 40px 0 40px 0}
 .cal-la02{margin: 0 10px 0 10px;
-    border: #ffffff solid;
-    width: 50px;}
+    border: gray() solid;
+    padding-left: 10px;
+    width: 70px;
+    border-radius: 2px}
+aside p{width: 70px;}
+#cal_input{ width: 70px;
+    margin: 0 10px 0 16px;
+    padding-left: 10px;}
 
 footer {
   height: 300px;
@@ -70,6 +76,11 @@ footer {
   background-color: #000;
   color: #fff;
 }
+footer>h2{margin-left: 20px;
+    padding-top: 20px}
+footer ul{margin:20px 0 0 20px;}
+footer ul>li{margin-bottom: 20px}
+
 
 /* 로그인 페이지 */
 
